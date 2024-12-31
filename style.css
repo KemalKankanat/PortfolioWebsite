@@ -1,0 +1,729 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    font-family: "Nunito", serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(2, 2, 22);
+}
+
+html ::-webkit-scrollbar{
+    width: 0.3rem;
+}
+
+html ::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.navbarcontainer{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    height: 7rem;
+    z-index: 1000;
+}
+
+.navbarcontaineractive{
+    background: rgba(2, 2, 22, 0.2);
+    backdrop-filter: blur(30px);
+}
+
+.navbarcontaineractive::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    right: 3%; 
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent 
+    );
+    border-radius: 50%; 
+}
+
+.logokemaltext a{
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.logokemaltext a:active{
+    text-decoration: underline;
+}
+
+.logokemaltext{
+    display: flex;
+    font-size: 1.2rem;
+    margin-left: 8%;
+    align-items: center;
+}
+
+.navbar{
+    display: flex;
+    gap: 4rem;
+    font-size: 2rem;
+    align-items: center;
+    margin-right: 10rem;
+}
+
+.navbar a{
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.navbar :active{
+    text-decoration: underline;
+}
+
+.menuicon{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1100;
+}
+
+.menuicon div{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.25);
+    height: 2px;
+    width: 24px;
+    transition: 0.3s;
+}
+
+.move .line1{
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.move .line2{
+    opacity: 0;
+}
+
+.move .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.home{
+    min-height: 900px;
+}
+
+.hometext{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 7rem;
+    position: absolute;
+    top: 400px; 
+    left: 10%;
+}
+
+.about{
+    margin-top: 100px;
+}
+
+.logoabouttext{
+    color: rgba(255, 255, 255, 0.02);
+    font-size: 11rem;
+    transform: rotate(-90deg);
+    display: inline-block;
+    position: relative;
+    top: 435px;
+    left: -2%;
+}
+
+.aboutme{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2rem;
+}
+
+.aboutmetitle{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.computerskills{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2rem;
+}
+
+.computerskillstitle{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.aboutcomputerskillscontainer{
+    display: flex;
+    gap: 6.5rem;
+    flex-wrap: wrap;
+    width: 1250px;
+}
+
+.education{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2rem;
+}
+
+.educationtitle{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.languages{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2rem;
+}
+
+.languagestitle{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.educationlanguagescontainer{
+    display: flex;
+    gap: 29rem;
+    flex-wrap: wrap;
+    width: 1250px;
+}
+
+.allaboutcontainer{
+    margin-left: 22%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.projects{
+    margin-top: 100px;
+}
+
+.logoprojectstext{
+    color: rgba(255, 255, 255, 0.02);
+    font-size: 10.5rem;
+    transform: rotate(-90deg);
+    display: inline-block;
+    position: relative;
+    left: 67%;
+    top: 420px;
+}
+
+.mobilegamescontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobilegames{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.mobilegamestitle{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 3rem;
+}
+
+.atonce{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.atonceimage{
+    width: 15rem;
+}
+
+.atoncetext{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2rem;
+}
+
+.mathink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mathinkimage{
+    width: 15rem;
+}
+
+.mathinktext{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2rem;
+}
+
+.websitecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.websitetitle{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 3rem;
+}
+
+.developerwebsiteimage{
+    width: 40rem;
+}
+
+.websitetext{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2rem;
+}
+
+.allprojectscontainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+    align-items: center;
+    margin-left: 12%;
+    padding-top: 10px;
+}
+
+.contact{
+    margin-top: 200px;
+    min-height: 900px;
+}
+
+.logocontacttext{
+    color: rgba(255, 255, 255, 0.02);
+    font-size: 11rem;
+    transform: rotate(-90deg);
+    display: inline-block;
+    position: relative;
+    top: 400px;
+    left: -8%;
+}
+
+.contacttitle{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 5rem;
+    margin-left: 30%;
+}
+
+.phonetext{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2rem;
+}
+
+.phonecontainer .bx{
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.phonecontainer{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 700px;
+}
+
+.mailtext{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2rem;
+}
+
+.mailcontainer .bx{
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.mailcontainer{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 700px;
+}
+
+.addresstext{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2rem;
+}
+
+.addresscontainer .bx{
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.addresscontainer{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 700px;
+}
+
+.contactcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 70px;
+    margin-left: 22%;
+}
+
+@media (hover :hover){
+    .navbar :hover{
+        text-decoration: underline;
+    }
+
+    .logokemaltext a:hover{
+        text-decoration: underline;
+    }
+}
+
+@media (max-width:1850px){
+    .aboutcomputerskillscontainer{
+        gap: 5rem;
+        flex-direction: column;
+    }
+
+    .educationlanguagescontainer{
+        gap: 5rem;
+        flex-direction: column;
+    }
+
+    .logoabouttext{
+        top: 600px;
+    }
+}
+
+@media (max-width:1750px){
+    .logoabouttext{
+        transform: rotate(0deg);
+        font-size: 7rem;
+        text-align: center;
+        display: block;
+        position: static;
+        padding-top: 100px;
+    }
+
+    .allaboutcontainer{
+        margin-top: 0;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .logoprojectstext{
+        transform: rotate(0deg);
+        font-size: 7rem;
+        text-align: center;
+        display: block;
+        position: static;
+        padding-top: 100px;
+    }
+
+    .mobilegamescontainer{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logocontacttext{
+        transform: rotate(0deg);
+        font-size: 7rem;
+        text-align: center;
+        display: block;
+        position: static;
+        padding-top: 100px;
+    }  
+    
+    .aboutcomputerskillscontainer{
+        width: 40%;
+    }
+
+    .educationlanguagescontainer{
+        width: 40%;
+    }
+
+    .allprojectscontainer{
+        padding-top: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .contactcontainer{
+        margin-left: 0;
+        align-items: center;
+        gap: 3rem;
+    }
+    
+    .contacttitle{
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width:1250px){
+    .menuicon{
+        display: flex;
+        margin-right: 3rem;
+    }
+
+    .navbar{
+        position: absolute;
+        height: 500px;
+        width: 250px;
+        right: -180px;
+        display: none
+    }
+
+    .openmenu{
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+        background-color: rgba(0, 0, 0);
+        z-index: 1050;
+    }
+}
+
+@media (max-width:920px){
+    .contacttitle{
+        white-space: nowrap;
+    }
+
+    .mobilegamestitle{
+        white-space: nowrap;
+    }
+}
+
+@media (max-width:760px){
+    .mobilegames{
+        flex-direction: column;
+    }
+
+    .logoabouttext{
+        font-size: 6rem;
+    }
+
+    .logoprojectstext{
+        font-size: 6rem;
+    }
+
+    .logocontacttext{
+        font-size: 6rem;
+        padding-top: 100px;
+    }
+
+    .contacttitle{
+        font-size: 4rem;
+    }
+
+    .mailtext{
+        font-size: 2.5rem;
+    }
+
+    .addresstext{
+        font-size: 2.5rem;
+    }
+
+    .phonecontainer{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mailcontainer{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .addresscontainer{
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media (max-width:650px){
+    .developerwebsiteimage{
+        width: 30rem;
+    }
+
+    .mathinkimage{
+        width: 12rem;
+    }
+
+    .atonceimage{
+        width: 12rem;
+    }
+
+    .logoabouttext{
+        font-size: 5rem;
+    }
+
+    .logoprojectstext{
+        font-size: 5rem;
+    }
+
+    .logocontacttext{
+        font-size: 5rem;
+    }
+
+    .hometext{
+        font-size: 6rem;
+    }
+
+    .logokemaltext{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:500px){
+    .hometext{
+        font-size: 3rem;
+    }
+
+    .logoabouttext{
+        font-size: 4rem;
+    }
+
+    .logoprojectstext{
+        font-size: 4rem;
+    }
+
+    .logocontacttext{
+        font-size: 4rem;
+    }
+
+    .aboutmetitle{
+        font-size: 2rem;
+    }
+
+    .computerskillstitle{
+        font-size: 2rem;
+    }
+
+    .languagestitle{
+        font-size: 2rem;
+    }
+
+    .educationtitle{
+        font-size: 2rem;
+    }
+
+    .mobilegamestitle{
+        font-size: 2rem;
+    }
+
+    .contacttitle{
+        font-size: 3rem;
+    }
+
+    .phonetext{
+        font-size: 1.5rem;
+    }
+
+    .phonecontainer .bx{
+        font-size: 5rem;
+    }
+
+    .mailtext{
+        font-size: 1.5rem;
+    }
+
+    .mailcontainer .bx{
+        font-size: 5rem;
+    }
+
+    .addresstext{
+        font-size: 1.5rem;
+    }
+
+    .addresscontainer .bx{
+        font-size: 5rem;
+    }
+
+    .developerwebsiteimage{
+        width: 20rem;
+    }
+
+    .atonceimage{
+        width: 9rem;
+    }
+
+    .mathinkimage{
+        width: 9rem;
+    }
+
+    .logokemaltext{
+        font-size: 0.7rem;
+    }
+
+    .menuicon div{
+        width: 18px;
+        height: 2px;
+    }
+
+    .websitetitle{
+        font-size: 2rem;
+    }
+
+    .atoncetext{
+        font-size: 1rem;
+    }
+
+    .mathinktext{
+        font-size: 1rem;
+    }
+
+    .websitetext{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:400px){
+    .logokemaltext{
+        font-size: 0.5rem;
+    }
+
+    .education{
+        font-size: 1rem;
+    }
+    
+    .computerskills{
+        font-size: 1rem;
+    }
+
+    .aboutme{
+        font-size: 1rem;
+    }
+
+    .languages{
+        font-size: 1rem;
+    }
+
+    .aboutmetitle{
+        font-size: 1.5rem;
+    }
+
+    .computerskillstitle{
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+    .languagestitle{
+        font-size: 1.5rem;
+    }
+
+    .educationtitle{
+        font-size: 1.5rem;
+    }
+
+    .navbar{
+        font-size: 1.5rem;
+    }
+}
